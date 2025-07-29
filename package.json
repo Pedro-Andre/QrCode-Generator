@@ -1,0 +1,16 @@
+{
+  "name": "qrcodegenerator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/js/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

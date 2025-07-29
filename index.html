@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qr Code Generator</title>
+    <!-- FAV ICON -->
+    <link
+      rel="icon"
+      href="https://icons.veryicon.com/png/o/miscellaneous/new-version-of-star-selected-icon/scan-28.png"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="qr-container">
+        <h1 class="qr-title">Seu QrCode:</h1>
+        <div class="spinner"></div>
+        <canvas id="canvas"> </canvas>
+      </div>
+
+      <div class="inputs-container">
+        <label for="link">
+          Insira seu link:
+          <input type="text" id="link" class="string-link" />
+        </label>
+
+        <div class="buttons-container">
+          <button class="btn create-btn">Gerar QrCode</button>
+          <button class="btn clear-btn">Limpar campo</button>
+          <button class="btn download-btn">
+            <a href="" class="download-link">Baixar QrCode</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script defer type="module" src="./src/index.js"></script>
+  </body>
+</html>
