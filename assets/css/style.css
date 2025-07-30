@@ -9,6 +9,11 @@
   --font: "Encode Sans Expanded", sans-serif;
 }
 
+::selection {
+  background: var(--clr-primary);
+  color: var(--clr-black);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,11 +25,6 @@ html {
   font-size: 62.5%;
 }
 
-::selection {
-  background: var(--clr-primary);
-  color: var(--clr-black);
-}
-
 body {
   font-size: 1.6rem;
   background: var(--clr-bg-gradient);
@@ -32,12 +32,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: monospace;
+  padding: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
   width: 100%;
   max-width: 95rem;
+  height: auto;
   min-height: 60rem;
   border-radius: 3rem;
   background: #00000010;
@@ -58,6 +64,7 @@ body {
   align-items: center;
   width: 100%;
   flex: 1;
+  padding: 1rem;
 }
 
 #canvas {
@@ -77,8 +84,7 @@ body {
   min-height: 30rem;
   align-items: center;
   justify-content: space-evenly;
-  row-gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 
 .inputs-container label {
@@ -106,16 +112,17 @@ body {
   box-shadow: 0 0 1rem 0.5rem var(--clr-primary-shadow);
 }
 
-.inputs-container .buttons-container {
+.buttons-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 2rem 3rem;
   width: 100%;
+  margin-top: 1rem;
 }
 
-.inputs-container .btn {
+.buttons-container .btn {
   font-size: 2rem;
   padding: 0.5rem;
   width: 100%;
@@ -183,5 +190,51 @@ body {
 @keyframes rotate {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 970px) {
+  .buttons-container {
+    margin-top: 3rem;
+    margin-bottom: -4.5rem;
+  }
+
+  .buttons-container .btn,
+  .buttons-container .btn.btn.clear-btn {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  #canvas {
+    display: block;
+    border: 0.1rem solid var(--clr-white);
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .qr-container {
+    margin-inline: 1rem;
+    overflow-x: scroll;
+  }
+
+  .container {
+    flex-direction: column;
+    min-height: 80rem;
+    margin-block: 5rem;
+    justify-content: center;
+  }
+
+  .inputs-container {
+    min-height: 40rem;
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+
+  .buttons-container {
+    height: auto;
+    margin-top: 5rem;
+    flex-direction: column;
+    gap: 2rem;
   }
 }
