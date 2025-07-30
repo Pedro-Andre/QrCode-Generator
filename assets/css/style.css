@@ -163,8 +163,10 @@ img {
 }
 
 .btn a {
+  display: block;
   text-decoration: none;
   color: var(--clr-black);
+  padding-block: 0.6rem;
 }
 
 .btn.download-btn {
